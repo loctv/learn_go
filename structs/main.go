@@ -25,11 +25,12 @@ func main() {
 		},
 	}
 
-	jim.updateName("Jimmy")
+	j := &jim
+	j.updateName("Jimmy")
 	jim.print()
 }
 
-func (p person) updateName(newFirstName string) {
+func (p *person) updateName(newFirstName string) {
 	p.firstName = newFirstName
 }
 
